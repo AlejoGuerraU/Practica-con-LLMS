@@ -1,0 +1,12 @@
+Pregunta 2:
+Predicción de Riesgo mediante Regresión de Cuantiles
+Contexto: En la gestión de riesgos financieros, no solo interesa predecir el valor esperado de un activo, sino también el "Valor en Riesgo",
+es decir, el escenario de pérdida extrema (percentil 95).
+Tu tarea: Debes escribir una función llamada predecir_riesgo_cuantil(X, y, cuantil=0.95) que:
+Escale las características X usando StandardScaler de Scikit-Learn.
+Entrene un modelo GradientBoostingRegressor configurado con loss='quantile', alpha=cuantil y random_state=42.
+Calcule el error de pérdida de cuantil (Pinball Loss) promedio sobre los mismos datos.
+Retorne un diccionario con las siguientes llaves:
+"modelo": El objeto del modelo entrenado.
+"predicciones": Un numpy.ndarray con los valores del cuantil predichos para cada fila de X.
+"pinball_loss": Un valor float redondeado a 4 decimales que represente el error promedio obtenido.
