@@ -1,1 +1,10 @@
-
+Pregunta1: 
+Optimización de Clusters mediante el Índice de Davies-Bouldin
+Contexto: Trabajas en una empresa de logística analizando coordenadas de entrega capturadas por GPS. El conjunto de datos no tiene etiquetas y contiene valores atípicos (outliers) debido a interferencias en la señal de los sensores, lo que podría distorsionar un escalado tradicional. Tu objetivo es encontrar el número de grupos (zonas de entrega) que minimice la dispersión interna y maximice la separación entre ellos.
+Tu misión: Debes escribir una función llamada optimizar_zonas_davies(X, k_min=2, k_max=10) que realice lo siguiente:
+Preprocesamiento: Utilice RobustScaler de Scikit-Learn para normalizar las características, asegurando que los valores atípicos no distorsionen la escala de los datos
+.
+Iteración de Modelos: Pruebe valores de k desde k_min hasta k_max (inclusive) entrenando un modelo KMeans (con random_state=42).
+Cálculo de Métrica: Para cada k, calcule el Índice de Davies-Bouldin utilizando la función davies_bouldin_score de sklearn.metrics.
+Optimización: Utilice Numpy para identificar el valor de k que minimiza dicho índice (a diferencia de la silueta, en este índice un valor menor indica una mejor segmentación).
+Retorno: Devuelva una tupla (k_optimo, score_minimo) donde el score esté redondeado a 4 decimales
