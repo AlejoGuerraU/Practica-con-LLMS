@@ -1,0 +1,10 @@
+pregunta 4
+Contexto: Trabajas en un e-commerce analizando el comportamiento de navegación. Los datos son de alta dimensionalidad y
+presentan relaciones no lineales que el PCA tradicional no logra capturar. Además, los sensores de actividad generan valores infinitos
+por errores de división en el frontend.
+Tu misión: Escribe una función llamada segmentar_comportamiento_robusto(df, n_clusters=3) que:
+Limpieza Avanzada: Use Numpy para reemplazar valores infinitos (np.inf) por el valor máximo de cada columna y complete los nulos con la mediana [Tu Consulta].
+Reducción de Dimensionalidad: Aplique t-SNE (TSNE) de Scikit-Learn para reducir los datos a 2 componentes, configurando un random_state=42.
+Agrupamiento: Utilice AgglomerativeClustering para identificar los grupos basados en las coordenadas del t-SNE.
+Retorno: Devuelva el DataFrame original con una nueva columna 'subsegmento_id' y el valor del coeficiente de silueta calculado para validar la 
+cohesión de los grupos.
