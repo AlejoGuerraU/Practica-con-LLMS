@@ -1,0 +1,15 @@
+Pregunta 3:
+Análisis de Dinámica y Asimetría en Series Temporales
+Contexto: Trabajas analizando la estabilidad de una turbina eólica. No solo te interesa el promedio de la temperatura, 
+sino la asimetría (skewness) de las lecturas y la amplitud del rango en periodos cortos, ya que una asimetría alta suele preceder a fallos mecánicos.
+Tu misión: Debes escribir una función llamada extraer_dinamica_temporal(df, col_sensor, ventana=12) que realice lo siguiente:
+Cálculo de Features Avanzadas: Usando Pandas, calcule para cada fila las siguientes tres métricas sobre la columna col_sensor en una ventana
+deslizante de tamaño ventana:
+Asimetría Móvil: La asimetría de los datos (.skew()).
+Rango Móvil: La diferencia entre el valor máximo y el valor mínimo dentro de la ventana.
+Tasa de Cambio: La diferencia entre el valor actual y el valor de la fila anterior (.diff()).
+Limpieza: Elimine las filas con valores nulos (NaN) resultantes de los cálculos.
+Escalado Robusto: Utilice RobustScaler de Scikit-Learn para normalizar las 3 nuevas características, asegurando que los picos térmicos atípicos
+no distorsionen la escala.
+Retorno: Devuelva un DataFrame de Pandas que contenga únicamente las 3 nuevas columnas escaladas, manteniendo el índice original para poder alinearlo con otros 
+sensores.
