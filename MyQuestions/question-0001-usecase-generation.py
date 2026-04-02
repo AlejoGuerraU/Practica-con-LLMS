@@ -1,7 +1,5 @@
 def generar_caso_de_uso(n_puntos=500, n_centros=4, ruido=0.1):
-    """
-    Crea un dataset sintético de coordenadas GPS (Lat, Long).
-    """
+    import numpy as np
     from sklearn.datasets import make_blobs
     
     # Generar zonas de entrega normales
