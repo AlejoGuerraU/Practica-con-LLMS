@@ -1,4 +1,5 @@
-#Data science questions
+# Data science questions
+<br>
 student: Alejandro Guerra Urrego
 <br>
-E-mail: alejandro.guerrau@udea.edu.co
+email: alejandro.guerrau@udea.edu.co
