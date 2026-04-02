@@ -1,8 +1,6 @@
+import numpy as np
 def generar_caso_financiero(n_muestras=1000):
-    """
-    Genera un dataset sintético donde la varianza aumenta con X (Heterocedasticidad),
-    ideal para probar regresión de cuantiles.
-    """
+
     np.random.seed(42)
     # Variable X: Indicador de volatilidad del mercado
     X = np.linspace(0, 10, n_muestras).reshape(-1, 1)
