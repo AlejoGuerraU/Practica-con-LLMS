@@ -22,4 +22,4 @@ def generar_caso_de_uso_ecommerce(n_usuarios=400):
     print(f"Dimensiones: {df.shape}")
     print(f"Sensores con errores detectados (inf/nan)... listo.")
     
-    return df
+   return {"df": df}, {"n_clusters": 4}
