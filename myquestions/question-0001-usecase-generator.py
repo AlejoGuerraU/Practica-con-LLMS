@@ -1,4 +1,4 @@
-def generar_caso_de_uso(n_puntos=500, n_centros=4, ruido=0.1):
+def generar_caso_de_uso_zonas(n_puntos=500, n_centros=4, ruido=0.1):
     import numpy as np
     from sklearn.datasets import make_blobs
     
