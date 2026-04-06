@@ -24,4 +24,4 @@ def generar_caso_de_uso_turbina(n_lecturas=1000):
     print(f"Total de registros: {n_lecturas}")
     print("Periodo de anomalía detectado en el tramo final.")
     
-    return df, {"col_sensor": "temp_ambiente", "ventana": 12}
+    return {"df": df}, {"col_sensor": "temp_ambiente", "ventana": 12}
