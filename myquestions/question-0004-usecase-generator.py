@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-def generar_caso_ecommerce(n_usuarios=400):
+def generar_caso_de_uso_ecommerce(n_usuarios=400):
 
     np.random.seed(42)
     # Creamos 10 variables (clics, scroll, tiempo, etc.)
