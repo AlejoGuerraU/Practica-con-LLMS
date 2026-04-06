@@ -3,8 +3,12 @@ def generar_caso_de_uso(n_puntos=500, n_centros=4, ruido=0.1):
     from sklearn.datasets import make_blobs
     
     # Generar zonas de entrega normales
-    X, _ = make_blobs(n_samples=n_puntos, centers=n_centros, 
-                       cluster_std=0.5, random_state=10)
+    X, _ = make_blobs(
+        n_samples=n_puntos,
+        centers=n_centros,
+        cluster_std=0.5,
+        random_state=10
+    )
     
     # Simular interferencia de sensores (Outliers extremos)
     n_outliers = int(n_puntos * ruido)
@@ -13,8 +17,7 @@ def generar_caso_de_uso(n_puntos=500, n_centros=4, ruido=0.1):
     X_final = np.vstack([X, outliers])
     np.random.shuffle(X_final)
     
-    print(f"--- Caso de Uso Generado ---")
+    print("--- Caso de Uso Generado ---")
     print(f"Puntos totales: {len(X_final)} (incluyendo {n_outliers} outliers)")
-    return X_final
-
-
+    
+    return X_final, {"k_min": 2, "k_max": 10}
