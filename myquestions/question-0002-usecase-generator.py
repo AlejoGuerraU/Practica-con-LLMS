@@ -1,5 +1,5 @@
 import numpy as np
-def generar_caso_uso_financiero(n_muestras=1000):
+def generar_caso_de_uso_financiero(n_muestras=1000):
 
     np.random.seed(42)
     # Variable X: Indicador de volatilidad del mercado
