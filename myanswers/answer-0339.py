@@ -13,14 +13,12 @@ def evaluar_modelo_riesgo(df, target_col):
     )
     
     # 3. Entrenar modelo
-    modelo = LogisticRegression(random_state=42)
+    modelo = LogisticRegression(max_iter=200)
     modelo.fit(X_train, y_train)
     
     # 4. Evaluar el modelo
     y_pred = modelo.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     
-    # 5. Extraer coeficientes
-    coeficientes = modelo.coef_[0]
-    
-    return (accuracy, coeficientes)
+    # 5. Retornar coef_ completo, sin [0]
+    return (accuracy, modelo.coef_)
